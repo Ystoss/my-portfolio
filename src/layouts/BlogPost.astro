@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "@/components/Date.astro";
+import Layout from "@/layouts/Layout.astro";
+
+type Props = CollectionEntry<"games">["data"];
+
+const { title, gametype, updatedDate, heroImage, heroVideo, description } = Astro.props;
+---
+
+<Layout>
+  <article class="pb-10 grid place-items-center grid-cols-1">
+    <!-- Hero Video -->
+    <div class="w-full grid place-items-center my-10 px-10 overflow-x-hidden">
+      {heroVideo && (
+        <div class="relative w-full max-w-5xl">
+          <video
+            id="heroVideo"
+            src={heroVideo}
+            autoplay
+            loop
+            muted
+            playsinline
+            class="rounded-2xl w-full"
+          />
+          <button
+            class="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1 rounded-lg text-sm"
+            onclick="const v = document.getElementById('heroVideo'); v.muted = !v.muted; this.textContent = v.muted ? '🔇' : '🔊';"
+          >
+            🔇
+          </button>
+        </div>
+      )}
+    </div>
+
+    <!-- Content -->
+    <div
+      class="prose !max-w-[90vw] overflow-x-hidden !break-words brightness-110 prose-img:scale-90 prose-img:rounded-2xl prose-invert prose-hr:border-white prose-hr:bg-white px-4 md:px-0 md:max-w-4xl"
+    >
+      <div>
+        <div>
+          <p class="text-white font-medium tracking-widest text-sm mb-4">
+            {gametype}
+          </p>
+        </div>
+        <h1>{title}</h1>
+        <hr />
+      </div>
+
+      <!-- Description avant le slot -->
+      <div>
+        {description && (
+          <p class="text-white text-lg md:text-base mb-6">
+            {description}
+          </p>
+        )}
+        <slot />
+      </div>
+    </div>
+  </article>
+</Layout>
