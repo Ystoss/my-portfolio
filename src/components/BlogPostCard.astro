@@ -5,9 +5,10 @@ type Props = {
   slug: string;
   excerpt: string;
   image: string;
+  engine : string;
 };
 
-const { title, gametype, slug, excerpt, image } = Astro.props;
+const { title, gametype, slug, excerpt, image, engine } = Astro.props;
 ---
 
 <div
@@ -32,7 +33,7 @@ const { title, gametype, slug, excerpt, image } = Astro.props;
         </h2>
 
         <p class="text-white font-medium tracking-widest text-sm mb-4">
-          [{gametype}]
+          [{gametype}] [{engine}]
         </p>
 
         <p class="text-white/80 text-sm font-thin mb-6 line-clamp-2">

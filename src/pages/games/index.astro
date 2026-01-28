@@ -20,6 +20,7 @@ const posts = (await getCollection("games")).sort(
             excerpt={post.data.description}
             gametype={post.data.gametype}
             image={post.data.heroImage}
+            engine={post.data.engine}
           />
         ))
       }

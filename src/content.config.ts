@@ -10,6 +10,7 @@ const games = defineCollection({
     description: z.string(),
     gametype: z.string(),
     order: z.number(),
+    engine: z.string().optional(),
     heroVideo: z.string().optional(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
