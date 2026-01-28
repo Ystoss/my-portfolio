@@ -13,13 +13,21 @@ I developped 100% of the game except for all the music and sound design part.
 Through this project, I learned and worked on: :
 
 - Usage of the Godot 4 engine
+
 - Object-Oriented Programming principles: Encapsulation, Inheritance, and Polymorphism
+
 - Basics of the GLSL language through a vignette shader
+
 - Game feel through juiciness, player feedhback, and forgiveness mechanics
+
 - Game design for enemy and boss movement and shooting patterns, with the use of mathematics for implementation
+
 - Design and implementation of a player special ability: bullet-time dashes using a simple state machine
+
 - Basics of Photoshop for UI and in-game assets
+
 - Level Design
+
 - Implementation and design of the First Time User Experience (FTUE)
 
 
