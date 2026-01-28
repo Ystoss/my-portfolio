@@ -1,6 +1,6 @@
 ---
 title: "Rush"
-description: "Copy of the game Rush by Two Tribes with my own universe and gamefeel"
+description: "Copy of the game Rush by Two Tribes with my own universe and gamefeel. Solo project"
 gametype: "Puzzle Game"
 order: 2
 heroImage: "/RushHero.png"

@@ -15,22 +15,16 @@ const { title, gametype, updatedDate, heroImage, heroVideo, description } = Astr
       {heroVideo && (
         <div class="relative w-full max-w-5xl">
           <video
-            id="heroVideo"
             src={heroVideo}
+            controls
             autoplay
+           muted
             loop
-            muted
             playsinline
-            class="rounded-2xl w-full"
-          />
-          <button
-            class="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1 rounded-lg text-sm"
-            onclick="const v = document.getElementById('heroVideo'); v.muted = !v.muted; this.textContent = v.muted ? '🔇' : '🔊';"
-          >
-            🔇
-          </button>
-        </div>
-      )}
+           class="rounded-2xl w-full"
+         />
+       </div>
+     )}
     </div>
 
     <!-- Content -->
@@ -51,7 +45,7 @@ const { title, gametype, updatedDate, heroImage, heroVideo, description } = Astr
       <div>
         {description && (
           <p class="text-white text-lg md:text-base mb-6">
-            {description}
+            <h3>{description}</h3>
           </p>
         )}
         <slot />

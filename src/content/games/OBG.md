@@ -1,11 +1,13 @@
 ---
 title: "One Button Game"
-description: "Simple platformer game with a twist : you have to choose the juiciness effects yourself ! Designed to teach the basics of Juiciness in games"
+description: "Simple platformer game with a twist : you have to choose the juiciness effects yourself ! Designed to teach the basics of Juiciness in games. Solo Project"
 gametype: "Serious Game / One Button Game"
 order: 3
 heroImage: "/OBGHero.png"
 heroVideo: "/OBG_Video.mp4"
 ---
+
+![Alt text](/ShmupHero.png)
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
