@@ -2,7 +2,7 @@
 title: "Rush"
 description: "Copy of the game Rush by Two Tribes with my own universe and gamefeel. Solo project"
 gametype: "Puzzle Game"
-order: 2
+order: 1
 engine: "Unity C#"
 heroImage: "/RushHero.png"
 heroVideo: "/Rush_Video.mp4"
