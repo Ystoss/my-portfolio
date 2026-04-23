@@ -2,7 +2,7 @@
 title: "Sokoban"
 description: "Group project as 5 Gameplay Programmers, inspired by the classic Sokoban game, with a windy special feeature !"
 gametype: "Puzzle Game"
-order: 2
+order: 3
 engine: "Godot C#"
 heroImage: "/SokobanHero.jpg"
 heroVideo: "C4gK01bcz6bMvVGCHbzKmmqC9L9wVspz8mWrVN2TmB00Y"

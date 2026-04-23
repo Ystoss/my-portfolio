@@ -2,7 +2,7 @@
 title: "Shoot'Em Up"
 description: "First project, in association with a Sound Design student. Arcade Shmup with a boss phase in sync with music"
 gametype: "Action / Arcade game"
-order: 0
+order: 1
 engine: "Godot C#"
 heroImage: "/ShmupHero.png"
 heroVideo: "pf02f00Q01f67WE2XIS6JrkuoFWn8a02h00LHV1O01uEKBIPM"

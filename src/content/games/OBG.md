@@ -2,7 +2,7 @@
 title: "One Button Game"
 description: "Simple platformer game with a twist : you have to choose the juiciness effects yourself ! Designed to teach the basics of Juiciness in games. Solo Project"
 gametype: "Serious Game / One Button Game"
-order: 3
+order: 5
 engine: "Godot C#"
 heroImage: "/OBGHero.png"
 heroVideo: "02WdOlqsuAsi2ZFvaPh5H82uegs96JDrMhIUoqd8F6JI"

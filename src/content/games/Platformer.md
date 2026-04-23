@@ -2,7 +2,7 @@
 title: "Afterlife Museum"
 description: "Group project with a team of gameplay programmers, game artists and sound designers."
 gametype: "Platformer"
-order: -1
+order: 0
 engine: "Unity C#"
 heroImage: "/PlatformerHero.png"
 heroVideo: "6mcAGqUqeiI176R1cFBhSismZp7ySEneoMlPUL2ZHfo"
