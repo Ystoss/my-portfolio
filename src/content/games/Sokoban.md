@@ -5,7 +5,7 @@ gametype: "Puzzle Game"
 order: 2
 engine: "Godot C#"
 heroImage: "/SokobanHero.jpg"
-heroVideo: "/Sokoban_Video.mkv"
+heroVideo: "C4gK01bcz6bMvVGCHbzKmmqC9L9wVspz8mWrVN2TmB00Y"
 ---
 
 This was my first group project. The goal was to make a classic Sokoban game, which is a puzzle game where the player has to push boxes around to help them reach their targets, with a special feature. We chose to add wind currents that can push both the player and lighter boxes but can be blocked by heavier boxes. Through this project, I learned how to use Git.

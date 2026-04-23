@@ -5,7 +5,7 @@ gametype: "Serious Game / One Button Game"
 order: 3
 engine: "Godot C#"
 heroImage: "/OBGHero.png"
-heroVideo: "/OBG_Video.mp4"
+heroVideo: "02WdOlqsuAsi2ZFvaPh5H82uegs96JDrMhIUoqd8F6JI"
 ---
 
 I designed a mobile serious game aimed at teaching the fundamentals of game feel through direct player experimentation with one major constraint : the game uses only one button : the whole screen.

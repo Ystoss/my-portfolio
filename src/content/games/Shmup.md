@@ -5,7 +5,7 @@ gametype: "Action / Arcade game"
 order: 0
 engine: "Godot C#"
 heroImage: "/ShmupHero.png"
-heroVideo: "/Shmup_Video.mp4"
+heroVideo: "pf02f00Q01f67WE2XIS6JrkuoFWn8a02h00LHV1O01uEKBIPM"
 ---
 
 The goal was to create a fast-paced action game satisfying to play with the use of a lot of player feedbacks and effects.

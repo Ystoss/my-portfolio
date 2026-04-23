@@ -5,7 +5,7 @@ gametype: "Puzzle Game"
 order: 1
 engine: "Unity C#"
 heroImage: "/RushHero.png"
-heroVideo: "/Rush_Video.mp4"
+heroVideo: "QiJJmrZyCulNj6nmeUAMbSwluOW3hdA0200KrLkYPfuQg"
 ---
 
 Rush is a puzzle game built around two phases: first, the player places tiles in the level to redirect the cubes, then they test their solution. The entire game relies on a precise tick-based rhythm.

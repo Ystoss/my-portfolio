@@ -4,8 +4,8 @@ description: "Group project with a team of gameplay programmers, game artists an
 gametype: "Platformer"
 order: -1
 engine: "Unity C#"
-heroImage: "/ShmupHero.png"
-heroVideo: "/Shmup_Video.mp4"
+heroImage: "/PlatformerHero.png"
+heroVideo: "6mcAGqUqeiI176R1cFBhSismZp7ySEneoMlPUL2ZHfo"
 ---
 
 This platformer project was made in the course of 2 months with a team of 12 people : 3 gameplay programmers, 7 game artists and 2 sound designer.

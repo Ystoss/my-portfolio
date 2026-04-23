@@ -8,21 +8,27 @@ type Props = CollectionEntry<"games">["data"];
 const { title, gametype, updatedDate, heroImage, heroVideo, description } = Astro.props;
 ---
 
+<script>
+  import '@mux/mux-player';
+</script>
+
 <Layout>
   <article class="pb-10 grid place-items-center grid-cols-1">
     <!-- Hero Video -->
     <div class="w-full grid place-items-center my-10 px-10 overflow-x-hidden">
       {heroVideo && (
         <div class="relative w-full max-w-5xl">
-          <video
-            src={heroVideo}
-            controls
-            autoplay
-           muted
+          <mux-player
+            playback-id={heroVideo}
+            metadata-video-title="Walkthrough"
+            stream-type="on-demand"
+            autoplay="muted"
             loop
+            muted
             playsinline
-           class="rounded-2xl w-full"
-         />
+            controls
+            class="rounded-2xl w-full aspect-video"
+          />
        </div>
      )}
     </div>
@@ -53,3 +59,13 @@ const { title, gametype, updatedDate, heroImage, heroVideo, description } = Astr
     </div>
   </article>
 </Layout>
+
+<style>
+  mux-player {
+    display: block;
+    width: 100%;
+    max-height: 70vh; 
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+</style>
