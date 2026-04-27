@@ -22,6 +22,6 @@ export const NAV_LINKS: Array<{ title: string; href?: string }> = [
   },
   {
     title: "Resume",
-    href: "files/ABRAN_Jules_CV.pdf",
+    href: "files/ABRAN_Jules_CV_2026.pdf",
   },
 ];
