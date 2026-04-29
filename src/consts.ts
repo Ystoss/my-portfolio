@@ -18,7 +18,7 @@ export const NAV_LINKS: Array<{ title: string; href?: string }> = [
   },
   {
     title: "Linkedin",
-    href: "//linkedin.com/in/jules-abran-638689328/",
+    href: "//www.linkedin.com/in/jules-abran-638689328/",
   },
   {
     title: "Resume",
