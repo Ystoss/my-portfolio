@@ -3,7 +3,7 @@ export const SITE_DESCRIPTION =
   `Jules Abran's Gameplay Programmer portfolio`.trim();
 
 export const KNOWN_TECH =
-  `Unity, Godot, C#, Blender, Git, Game UX, Game Feel, Juiciness, Gameplay Systems, Physics-based Gameplay`.split(
+  `Unity, Godot, C#, Blender, Git, Game UX, Game Feel, Juiciness, Gameplay Systems, Physics-based Gameplay, Game Design, Level Design`.split(
     ",",
   );
 export const ABOUT_ME =
