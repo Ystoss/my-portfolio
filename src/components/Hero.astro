@@ -4,36 +4,99 @@ import HeroImg from "@/hero.png";
 import { QUOTE, SITE_TITLE } from "@/consts";
 ---
 
-<div class="hero-bg hidden md:block h-screen hero-bg-animate absolute top-0"></div>
+<!--
+  The hero fills the first screen (minus the navbar height, which is the
+  top padding of <main>: pt-28 on mobile, pt-20 from md).
+  "min-h" instead of "h": if the content is taller than the screen,
+  the section grows instead of overflowing onto the games list.
+-->
 <section
-  class="h-screen !z-[20] relative w-full grid grid-cols-1 grid-rows-1 sm:grid-cols-2 md:grid-cols-2 gap-4 items-center"
+  class="relative !z-[20] w-full min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-5rem)] grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-4 items-center overflow-hidden"
   id="hero"
 >
-  <div class="grid place-items-center">
-    <div class="text-center -mt-10">
-      <h1 class="font-bold text-7xl">{`<${SITE_TITLE} />`}</h1>
-      <h2 class="text-2xl opacity-95">
+  <!--
+    Binary background: positioned inside the hero (inset-0), so it always
+    has exactly the size of the hero section, whatever the screen size.
+  -->
+  <div class="hero-bg hero-bg-animate hidden md:block absolute inset-0" aria-hidden="true"></div>
+
+  <!-- Name + title: the main message of the page. -->
+  <div class="relative z-10 grid place-items-center px-4 pt-8 md:pt-0 md:-mt-10">
+    <div class="text-center px-6 py-5 md:px-10 md:py-8">
+      <!-- Font size follows the screen width so the name always stays on one line -->
+      <h1 class="font-bold leading-none whitespace-nowrap text-[clamp(2rem,10vw,3.5rem)] md:text-[clamp(2.5rem,5.5vw,6rem)]">
+        {`<${SITE_TITLE} />`}
+      </h1>
+      <h2 class="mt-4 text-xl sm:text-2xl xl:text-3xl">
         {QUOTE}
       </h2>
     </div>
   </div>
-  <div>
+  <div class="relative z-10 grid place-items-center py-4">
     <Image
       alt="Hero"
       src={HeroImg}
-      class="brightness-200 w-full scale-90 invert"
+      class="brightness-200 invert w-[90%] h-auto max-h-[calc(100vh-8rem)] object-contain"
     />
   </div>
 </section>
 
-<script is:inline>
-  const hero_bg = document.querySelector(".hero-bg-animate");
+<script>
+  // With view transitions (ClientRouter), this script only runs once.
+  // "astro:page-load" fires on the first load AND after every navigation,
+  // so the animation restarts each time we come back to the homepage.
+  let heroBgInterval: ReturnType<typeof setInterval> | undefined;
+  let heroBgObserver: ResizeObserver | undefined;
 
-  setInterval(() => {
-    let binaryText = "";
-    for (let i = 0; i < 1000; i++) {
-      binaryText += Math.floor(Math.random() * 2).toString();
-    }
-    hero_bg.textContent = binaryText;
-  }, 300);
+  function stopHeroBg() {
+    clearInterval(heroBgInterval);
+    heroBgObserver?.disconnect();
+  }
+
+  // How many characters are needed to fill the element completely.
+  function charsToFill(el: HTMLElement): number {
+    const probe = document.createElement("span");
+    probe.textContent = "0".repeat(100);
+    probe.style.cssText =
+      "position:absolute;visibility:hidden;white-space:nowrap;";
+    el.appendChild(probe);
+    const charWidth = probe.getBoundingClientRect().width / 100;
+    el.removeChild(probe);
+
+    const lineHeight =
+      parseFloat(getComputedStyle(el).lineHeight) ||
+      parseFloat(getComputedStyle(el).fontSize) * 1.2;
+
+    if (!charWidth || !lineHeight) return 0;
+    const cols = Math.ceil(el.clientWidth / charWidth) + 1;
+    const rows = Math.ceil(el.clientHeight / lineHeight) + 1;
+    return cols * rows;
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    stopHeroBg();
+
+    const hero_bg = document.querySelector<HTMLElement>(".hero-bg-animate");
+    if (!hero_bg) return; // not on the homepage
+
+    let count = charsToFill(hero_bg);
+
+    // Recompute when the hero changes size (window resize, zoom, etc.).
+    heroBgObserver = new ResizeObserver(() => {
+      count = charsToFill(hero_bg);
+    });
+    heroBgObserver.observe(hero_bg);
+
+    heroBgInterval = setInterval(() => {
+      if (!count) return; // hidden (mobile) or not laid out yet
+      let binaryText = "";
+      for (let i = 0; i < count; i++) {
+        binaryText += Math.random() < 0.5 ? "0" : "1";
+      }
+      hero_bg.textContent = binaryText;
+    }, 300);
+  });
+
+  // Stop the animation when leaving the page.
+  document.addEventListener("astro:before-swap", stopHeroBg);
 </script>

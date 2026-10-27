@@ -63,9 +63,15 @@ img,
 
 .hero-bg {
   z-index: 0;
-  width: 100vw;
-  word-wrap: break-word;
+  /* Size comes from the hero section (absolute inset-0 in Hero.astro) */
+  overflow: hidden;
+  word-break: break-all;
+  line-height: 1.2;
   opacity: 0.06;
   font-size: 3rem;
   user-select: none;
+  pointer-events: none;
+  /* Short fade at the very bottom instead of a hard cut */
+  -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent);
+  mask-image: linear-gradient(to bottom, black 95%, transparent);
 }
