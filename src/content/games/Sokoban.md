@@ -1,6 +1,6 @@
 ---
 title: "Sokoban"
-description: "Group project as 5 Gameplay Programmers, inspired by the classic Sokoban game, with a windy special feeature !"
+description: "Group project as 5 Gameplay Programmers, inspired by the classic Sokoban game, with a windy special feature!"
 gametype: "Puzzle Game"
 order: 3
 engine: "Godot C#"
@@ -20,10 +20,10 @@ This was my first group project. The goal was to make a classic Sokoban game, wh
 
 - Designed a level of the game.
 
-- Implemented many player feedback and gamefeel effects.
+- Implemented many player feedback and game feel effects.
 
 
-<h3>GameFeel of the game:</h3>
+<h3>Game feel of the game:</h3>
 
 We wanted a dreamlike experience for the player that feels light and relaxing. I implemented several effects to achieve this:
 

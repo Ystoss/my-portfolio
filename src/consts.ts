@@ -7,7 +7,7 @@ export const KNOWN_TECH =
     ",",
   );
 export const ABOUT_ME =
-  `I am a Gameplay Programmer, currently in my 2nd year of studying at ISART Digital in Paris. My passion for video games started in childhood, I still remember realizing that you could cry tears of joy when I received my very first console at the age of 7: a Wii. 
+  `I am a Gameplay Programmer, currently in my 3rd year of studying at ISART Digital in Paris. My passion for video games started in childhood; I still remember realizing that you could cry tears of joy when I received my very first console at the age of 7: a Wii. 
   
   I am also passionate about science, mathematics and love logic and problem solving. That's why it is my dream to work in video games as a Gameplay Programmer, uniting both passion and skills I'm good at.`.trim();
 export const GITHUB_USERNAME = "Ystoss";

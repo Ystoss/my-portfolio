@@ -8,10 +8,10 @@ heroImage: "/ShmupHero.png"
 heroVideo: "pf02f00Q01f67WE2XIS6JrkuoFWn8a02h00LHV1O01uEKBIPM"
 ---
 
-The goal was to create a fast-paced action game satisfying to play with the use of a lot of player feedbacks and effects.
+The goal was to create a fast-paced action game satisfying to play with the use of a lot of player feedback and effects.
 
-I developped 100% of the game except for all the music and sound design part. 
-Through this project, I learned and worked on: :
+I developed 100% of the game except for all the music and sound design part. 
+Through this project, I learned and worked on:
 
 - Usage of the Godot 4 engine.
 
@@ -19,7 +19,7 @@ Through this project, I learned and worked on: :
 
 - Basics of the GLSL language through a vignette shader.
 
-- Game feel through juiciness, player feedhback, and forgiveness mechanics.
+- Game feel through juiciness, player feedback, and forgiveness mechanics.
 
 - Game design for enemy and boss movement and shooting patterns, with the use of mathematics for implementation.
 
@@ -33,7 +33,7 @@ Through this project, I learned and worked on: :
 
 
 
-<h3> I was heavily focused on GameFeel while developing this project : </h3>
+<h3> I was heavily focused on game feel while developing this project: </h3>
 
 Forgiveness mechanics: the player hitbox is smaller than its visual, but its hitbox for dealing damage to enemies while dashing is larger. This setup allows the player to make precise moves while still feeling challenged, without the game explicitly assisting or overpunishing them.
 

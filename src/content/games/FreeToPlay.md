@@ -11,7 +11,7 @@ The goal was to create a free-to-play mobile game prototype in one month, in a t
 
 It was my first time working with game design students, and this collaboration taught me a lot.
 
-The game is a Vampire Survivors-like, with a twist: the player doesn’t control their movement, instead, they are pushed around by the recoil of their weapons.
+The game is a Vampire Survivors-like, with a twist: the player doesn’t control their movement; instead, they are pushed around by the recoil of their weapons.
 
 I managed to accomplish a lot of tasks during this project:
 
@@ -23,5 +23,5 @@ I managed to accomplish a lot of tasks during this project:
 
 - A strong focus on game feel (“juiciness”), taking inspiration from games such as Vampire Survivors, Holocure, Megabonk, Survivor.io, Diep.io, and even the temporary Swarm mode in League of Legends
 
-- Work on a couple VFX, including the laser and stomp weapon previews and their associated visual effects
+- Work on a couple of VFX, including the laser and stomp weapon previews and their associated visual effects
 
